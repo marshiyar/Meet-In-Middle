@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the page metadata and load required external resources -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Meet in Middle</title>
+    <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Page header -->
+    <header>
+      <h1>Meet in Middle</h1>
+    </header>
+    <!-- Main content of the page -->
+    <main>
+      <!-- Section for adding addresses -->
+      <section class="address-section">
+        <h2>Enter Addresses</h2>
+        <div class="data_form address">
+          <form id="addressForm" action="">
+            <label for="address1">Address</label>
+            <input type="text" id="address1" name="address1" />
+            <input type="submit" value="Submit" />
+          </form>
+          <input type="button" id="newUserBtn" value="Add user" />
+        </div>
+      </section>
+      <!-- Section for displaying the middle point and recommended hangout -->
+      <section class="results-section">
+        <div class="middle_address">
+          <h2>Meet in the middle</h2>
+          <p id="middle_address"></p>
+        </div>
+        <div class="hangout_place">
+          <h2>Hangout Recommendation</h2>
+          <p id="Hangout_middle_place"></p>
+        </div>
+      </section>
+    </main>
+    <!-- Map element -->
+    <div id="map"></div>
+  </body>
+</html>
